@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CleanArch.Domain
+namespace CleanArch.Domain.Models
 {
-    class Course
+    public class Course
     {
         public int CourseID { get; set; }
         public string Name { get; set; }
