@@ -14,7 +14,7 @@ namespace CleanArch.Domain.CommandHandlers
     {
         private readonly ICourseRepository _courseRepository;
 
-        CreateCourseCommandHandler(ICourseRepository courseRepository)
+        public CreateCourseCommandHandler(ICourseRepository courseRepository)
         {
             _courseRepository = courseRepository;
         }

@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CleanArch.Infrastructure.Data;
 using CleanArch.Infrastructure.IoC;
+using MediatR;
 
 namespace CleanArch.Mvc
 {
@@ -39,6 +40,7 @@ namespace CleanArch.Mvc
             services.AddDbContext<UniversityDBContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("UniversityDBConnection")));
+            services.AddMediatR(typeof(Startup));
             RegisterServices(services);
         }
 
