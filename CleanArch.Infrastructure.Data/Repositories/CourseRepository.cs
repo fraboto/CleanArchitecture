@@ -2,6 +2,7 @@
 using CleanArch.Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CleanArch.Infrastructure.Data.Repositories
@@ -15,7 +16,7 @@ namespace CleanArch.Infrastructure.Data.Repositories
             _context = context;
         }
 
-        public IEnumerable<Course> GetCourses()
+        public IQueryable<Course> GetCourses()
         {
             return _context.Courses;
         }
